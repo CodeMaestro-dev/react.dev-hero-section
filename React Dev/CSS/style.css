@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 2px solid var(--react-dev-teal);
+}
+
+:root {
+    --react-dev-teal: #087EA4;
+    --react-dev-black-light: #404756;
+    --react-dev-black-dark: #23272F;
+    --react-dev-grey: #EBECF0;  
+    --react-text-grey: #99A1B3;  
+}
+
+@font-face {
+    font-family: "Optimistic_Display Bold";
+    src: url(../Assets/Fonts/Optimistic_Display_W_Bd.woff2);
+}
+
+@font-face {
+    font-family: "Optimistic_Display Semi Bold";
+    src: url(../Assets/Fonts/Optimistic_Display_W_SBd.woff2);
+}
+
+@font-face {
+    font-family: "Optimistic_Display Medium";
+    src: url(../Assets/Fonts/Optimistic_Display_W_Md.woff2);
+}
+
+@font-face {
+    font-family: "SourceCodePro-Regular";
+    src: url(../Assets/Fonts/AdobeOriginals-SourceCodePro-Regular.ttf);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 20px 0px 16px;
+
+    & > div:first-of-type {
+        display: flex;
+
+        & > svg {
+            color: var(--react-dev-teal);
+            width: 40px;
+            margin-inline-start: 10px;
+        }
+    }
+
+    & > button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        background-color: var(--react-dev-grey);
+        height: 2.5rem;
+        padding-block: 0.25rem;
+        padding-inline: 1rem 1rem;
+        border-radius: 9999px;
+
+        & > div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        & > div:first-of-type > span, svg{
+            font-family: "Optimistic_Display Medium";
+            font-weight: 500;
+            font-size: 1.0625rem;
+            line-height: 30px;
+            color: var(--react-text-grey);
+        }
+
+        & > div:last-of-type > span {
+            font-family: "SourceCodePro-Regular";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-block: 0.25rem;
+            padding-inline: 0.5rem;
+            border-radius: 0.375rem;
+            background-color: white;
+            margin-inline-end: 0.25rem;
+            color: var(--react-text-grey);
+        }
+
+    }
+
+    & > nav {
+        & > ul {
+            display: flex;
+            align-items: center;
+
+            & > li:not(:last-of-type) > a {
+                padding: 10px 12px;
+                border-radius: 9999px;;
+                font-family: "Optimistic_Display Medium";
+                color: var(--react-dev-black-light);
+                font-size: 0.9375rem;
+                font-weight: 500;
+                line-height: 30px;
+                text-align: center;
+                transition-duration: 0.15s;
+            }
+
+            & > li:not(:last-of-type) > a:hover {
+                background-color: var(--react-dev-grey);
+            }
+
+            & > li > a:focus {
+                outline: 1px solid var(--react-dev-teal);
+            }
+
+            & > li:nth-of-type(5) > button,
+            & > li:nth-of-type(6) > button{
+                border-radius: 50%;
+                width: 48px;
+                height: 48px;
+            }
+
+            & > li:nth-of-type(5) > button:hover,
+            & > li:nth-of-type(6) > button:hover,
+            & > li:last-of-type > div:hover {
+                background-color: var(--react-dev-grey);
+            }
+
+            & > li:nth-of-type(6) > button {
+                margin-inline: 10px;
+            }
+
+            & > li:last-of-type > div {
+                width: 48px;                
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+            }
+
+            & > li:last-of-type > div > a > svg {
+                color: var(--react-dev-black-light);
+                width: 20px;
+            }
+        }
+    }
+}
+
+.mobile-1 {
+    display: none;
+}
+
+.mobile-2 {
+    display: none;
+}
+
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block-start: 200px;
+
+    & > section > svg {
+        color: var(--react-dev-teal);
+        width: 112px;
+        height: 100.8px;
+    }
+
+    & > section > h1 {
+        font-family: "Optimistic_Display Semi Bold";
+        font-weight: 600;
+        font-size: 3.25rem;
+        line-height: 71.5px;
+        color: var(--react-dev-black-dark);
+    }
+
+    & > section > p {
+        font-family: "Optimistic_Display Medium";
+        text-align: center;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 44px;
+        color: var(--react-dev-black-light);
+        margin-block-end: 40px;
+    }
+
+    & > section:last-of-type {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    & > section > a {
+        text-align: center;
+        padding: 12px 24px;
+        font-family: "Optimistic_Display Bold";
+        font-size: 1.0625rem;
+        font-weight: 700;
+        line-height: 23.375px;
+        border-radius: 9999px;
+        transition-duration: 0.15s;
+    }
+
+    & > section > a:first-of-type {
+        background-color: var(--react-dev-teal);
+        color: white;
+    }
+
+    & > section > a:first-of-type:hover {
+        background-color: rgb(8 126 164/0.8);
+    }
+
+    & > section > a:last-of-type {
+        border: 1px solid var(--react-dev-grey);       
+        background-color: transparent;
+        color: var(--react-dev-black-dark);
+    }
+
+    & > section > a:last-of-type span {
+        text-transform: uppercase;
+    }
+
+    & > section > a:last-of-type:hover {
+        background-color: #F8F9FA;
+    }
+}
+
+
+@media screen and (max-width : 1023px){
+    header > nav > ul > li:not(:last-of-type) > a {
+        display: none;
+    }
+    
+    main {
+        padding-block-start: 100px;
+
+        & > section > svg {
+            width: 98px;
+            height: 90.8px;
+        }
+
+        & > section > h1 {
+            font-size: 40px;
+        }
+    }
+
+    .mobile-1 {
+        display: block;
+    }
+}
+
+@media screen and (max-width : 767px){
+    header > button {
+        display: none;
+    }
+
+    .mobile-2 {
+        display: block;
+    }
+}
+
+@media screen and (max-width : 639px) {
+    main > section:last-of-type {
+        border: 1px solid red;
+        width: 90%;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    main > section > a {
+        width: 100%;
+    }
+}
